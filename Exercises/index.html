@@ -20,8 +20,29 @@
             let intermediare=lbl1.textContent;
             lbl1.textContent=lbl2.textContent;
             lbl2.textContent=intermediare;
-            // modifier
-            document.getElementById("message").textContent=`Conversion de ${bl1.textContent} en ${bl2.textContent`
+            // modifier dynamiquement le contenu du message
+            document.getElementById("message").textContent=`Conversion de ${bl1.textContent} en ${bl2.textContent}`
+            
+            if(lbl1.innerText=== "celsius")
+            document.getElementById("degre").textContent=" en °C";
+            else
+            document.getElementById("degre").textContent="en"
+
+            //Reinitialiser l'interface
+
+            document.getElementById("temperature").value="";
+            document.getElementById("resultat").value="";
+
+        })
+
+        document.getElementById("temperateur").addEventListener(keyup, function(e){
+            let lbl1=document.getElementById("label1")
+            if(lbl1.textContent=="celieus")
+              document.getElementById("resultat").textContent=${e.target.value}°C=${Number(e.target.value)*9:5+32}
+            else
+            document.getElementById("resultat").textContent`${e.target.value}°F=${(Number(e.target.value)-32)*5/9}°C`
+            
+
         })
     </script>
 </body>
