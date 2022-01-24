@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversion de tempurateur</h1>
+    <label id="label1"celsius></label><button id="permuter">&#8644</button><label id="label2">fahrenheit</label>
+    <h2 id="message">conversion de celsius en fahrenheit</h2>
+    <label>Veuillez saisir la temperature</label><input type="text"><label id="degre">en C</label>
+    <h2 id="resultat"></h2>
+    <script>
+        document.getElementById("permuter").addEventListener('click',function(){
+            //permutation des valeurs des 2 labels
+            let lbl1=document.getElementById("label1");
+            let lbl2=document.getElementById("label2");
+            let intermediare=lbl1.textContent;
+            lbl1.textContent=lbl2.textContent;
+            lbl2.textContent=intermediare;
+            //
+            document.getElementById("message").textContent=`Conversion de ${bl1.textContent} en ${bl2.textContent`
+        })
+    </script>
+</body>
+</html>
