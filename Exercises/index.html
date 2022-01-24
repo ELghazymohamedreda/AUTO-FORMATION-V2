@@ -38,9 +38,10 @@
         document.getElementById("temperature").addEventListener('keyup', function(e){
             let lbl1=document.getElementById("label1");
             if(lbl1.textContent==="celieus")
-              document.getElementById("resultat").textContent=`${e.target.value}°C=${Number(e.target.value)*9/5+32}
+              document.getElementById("resultat").textContent=`${e.target.value}°C=${Number(e.target.value)*9/5+32
             else
             document.getElementById("resultat").textContent`${e.target.value}°F=${(Number(e.target.value)-32)*5/9}°C
+            
 
 
         })
