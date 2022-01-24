@@ -1,0 +1,44 @@
+<h1>conversion de temperature</h1>
+<label id="label1">celsius</label>
+<button id="Permuter">&#8644;</button>
+<label id="label2">Fahrenheit</label>
+<h2 id="message">conversion de celsius en Fahrenheit</h2>
+<label>veuillez saisir la temperature</label>
+<input type="text"><label id="degre"> en °C</label>
+<h2 id="resultat"></h2>
+
+<script>
+ 
+document.getElementById("permuter").addEventListener('click',function(){
+    // permutasion des valeurs des 2 labeles:
+    let lbl1 = document.getElementById("label1");
+    let lbl2 = document.getElementById("label2");
+    let intermediaire = lbl1.textContent;
+    lbl1.textContent = lbl2.textContent;
+    lbl2.textContent = intermediaire;
+
+    // modifier dynamiquement le contenu du message:
+    document.getElementById("message").textContent=conversion de ${lbl1.textContent} en ${lbl2.textContent};
+
+    // modifier dynamiquement le contenu du label degré:
+    if(lbl1.innerText === "celsius")
+    document.getElementById ("degre").textContent = "en °C";
+    else
+    document.getElementById ("degre").textContent = "en °F";
+
+    // réinsialiser l'interface:
+    document.getElementById("temperature").value = "";
+    document.getElementById("resultat").textContent = "";
+
+});
+document.getElementById("temperature").addEventListener('keyup',function(e){
+    let lbl1 = document.getElementById("lbl1");
+    if(lbl1.textContent === "celsius")
+    document.getElementById("resultat").textContent =${e.target.value}°C = ${Number(e.target.value)*9/5+32};
+    else
+    document.getElementById("resultat").textContent = ${e.target.value}°F = ${Number(e.target.value)*9/5+32}°C;
+
+
+});
+
+</script>
