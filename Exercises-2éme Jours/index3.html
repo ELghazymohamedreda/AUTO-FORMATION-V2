@@ -13,15 +13,16 @@
     </ul>
 
     <script>
-        let choix, input_loisir,li;
+        let choix, input_loisir,li, compteur = 0;
         let ul=document.querySelector('ul')
         do {
             input_loisir = prompt("priére de saiser un loiser :");
-            choix = confirm("voulez vous continuer ?");
+            compteur++
+            choix = confirm("voulez vous continuer ? vous avez saisi " + compteur + "fois");
             li = document.createElement('li');
             li.innerHTML = input_loisir;
             ul.appendChild(li)
-        } while (chois == true);
+        } while (choix == true);
 
         document.querySelector('p').innerHTML ="Nombre de loisirs =" + compteur
     </script>
