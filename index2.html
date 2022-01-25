@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    saisir un nombre : <input type="number" id="nbr" /> <br>
+    <button onclick="afficher_table_multiplication()">Table multiplication</button>
+    <div></div>
+</body>
+<script>
+    function afficher_table_multiplication(){
+        let x=documment.getElementById('nbr').
+        //récupérer la 1ère DIV
+        let dv=document.getElementsByTagName('div')[0]
+        dv.innerHTML = ""
+
+        //remplir la div par la tablede multiplication
+        for(let c=1;c<=10; c++){
+            dv.innerHTML += x + "*" + c + "=" + (x * c) + "<br>"
+        }
+    }
+</script>
+</html>
