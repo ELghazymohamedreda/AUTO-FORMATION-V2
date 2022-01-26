@@ -36,7 +36,17 @@
         // Variables globales
         var inputHeight = document.getElementById('rectangleHeight');
         var inputWidth = document.getElementById('rectangleWidth');
-        var inputRadius = document.getElementById('')
+        var inputRadius = document.getElementById('circleRadius');
+
+        document.getElementById("rectangleCalc").addEventListener('click', function(){
+            var resultat = superficieRectangle(inputHeight.value, inputWidth.value);
+            document.getElementsByTagName("p")[0].innerHTML = `superficie:$[resultat]`;
+        })
+
+        document.getElementById("rectangleCalc").addEventListener('click', function(){
+            var resultat = superficieCercle(inputRadius.value);
+            document.getElementsByTagName("p")[1].innerHTML = `superficie:$[resultat]`;
+        })
 
     </script>
 </body>
