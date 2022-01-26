@@ -33,7 +33,7 @@ function convertFahrenheit() {
     if(inputFahrenheit.value === '') {
         inputCelsius.value = '';
         inputKelvin.value = '';
-    }
+    } 
 
 }
 inputFahrenheit.addEventListener('keyup', convertFahrenheit);
