@@ -25,10 +25,14 @@
     </div>
     <script>
         function superficieRectangle(Longuer, Largeur){
+            var superficie = Longuer * Largeur ;
+            return Math.round(superficie);
+        }
+        function superficieRectangle(rayon){
             var superficie = rayon * rayon * Math.PI;
             return Math.round(superficie);
         }
-        
+
     </script>
 </body>
 </html>
